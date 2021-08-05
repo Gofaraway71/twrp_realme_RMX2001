@@ -55,4 +55,4 @@ jobs:
       run: |
         cd work/out/target/product/$DEVICE
         curl -sL https://git.io/file-transfer | sh
-        ./transfer wet recovery.img
+        ./transfer wet recovery-r7-rui2.img
