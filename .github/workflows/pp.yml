@@ -1,4 +1,34 @@
-   - name: Upload recovery image
+# This is taken from https://github.com/Area69Lab/Recovery-Builder-NoKernel
+# All credits goes to above repo
+
+name: Building recovery
+
+on:
+  workflow_dispatch:
+  watch:
+    types: [started]
+
+env:
+  MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
+  MANIFEST_BRANCH: twrp-11
+  DEVICE: RMX2001
+  DT_LINK: https://github.com/albatron34000/twrp_realme_RMX2001
+  DT_PATH: device/realme/RMX2001
+  TARGET: recoveryimage
+  TZ: Asia/Kolkata
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+   
+    - name: Build
+      run: |
+        cd work && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_$DEVICE-eng && mka $TARGET
+    - name: Upload recovery image
       run: |
         cd work/out/target/product/$DEVICE
         curl -sL https://git.io/file-transfer | sh
