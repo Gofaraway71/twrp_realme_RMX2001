@@ -12,7 +12,7 @@ env:
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
   MANIFEST_BRANCH: twrp-11
   DEVICE: RMX2001
-  DT_LINK: https://github.com/albatron34000/twrp_realme_RMX2001
+  DT_LINK: https://github.com/Gofaraway71/twrp_realme_RMX2001
   DT_PATH: device/realme/RMX2001
   TARGET: recoveryimage
   TZ: Asia/Kolkata
