@@ -54,7 +54,7 @@ jobs:
     - name: Upload recovery image
       run: |
         sudo apt-get update && sudo apt-get install sshpass -y
-              cd $BuildPath 
+             cd work/out/target/product/$DEVICE
               bash vendor/utils/pb_deploy.sh ${BUILD_RELEASE_TYPE} ${VENDOR} ${CODENAME}
         
         cd work/out/target/product/$DEVICE
