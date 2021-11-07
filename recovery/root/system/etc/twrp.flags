@@ -9,7 +9,7 @@ product		/product		ext4		display="Product";logical
 /recovery         emmc     /dev/block/platform/bootdevice/by-name/recovery     flags=backup=1;flashimg=1
 /bootloader       emmc     /dev/block/platform/bootdevice/by-name/lk           flags=display="bootloader";backup=1;flashimg=1
 /bootloader2      emmc     /dev/block/platform/bootdevice/by-name/lk2          flags=display="bootloader2";backup=1;flashimg=1
-/vbmeta          emmc /dev/block/platform/bootdevice/by-name/vbmeta          flags=display="VBMeta";backup=1
+/vbmeta          emmc /dev/block/platform/bootdevice/by-name/vbmeta          flags=display="VBMeta";backup=1;flashimg=1
 /vbmeta_system   emmc /dev/block/platform/bootdevice/by-name/vbmeta_system   flags=display="VBMeta (System)";backup=1
 /vbmeta_vendor   emmc /dev/block/platform/bootdevice/by-name/vbmeta_vendor   flags=display="VBMeta (Vendor)";backup=1
 /nvram           emmc /dev/block/platform/bootdevice/by-name/nvram           flags=display="NVRAM";backup=1
