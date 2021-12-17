@@ -23,6 +23,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
+    
     - name: Initializing environment
       run: |
         sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
