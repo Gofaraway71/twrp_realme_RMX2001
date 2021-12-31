@@ -1,7 +1,7 @@
 # This is taken from https://github.com/Area69Lab/Recovery-Builder-NoKernel
 # All credits goes to above repo
 
-name: Building recovery
+name: CI
 
 on:
   workflow_dispatch:
