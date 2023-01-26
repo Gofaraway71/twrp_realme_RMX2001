@@ -10,7 +10,7 @@ on:
 
 env:
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
-  MANIFEST_BRANCH: twrp-11
+  MANIFEST_BRANCH: twrp-12.1
   DEVICE: RMX2001
   DT_LINK: https://github.com/Gofaraway71/twrp_realme_RMX2001
   DT_PATH: device/realme/RMX2001
@@ -19,7 +19,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
       uses: actions/checkout@master
